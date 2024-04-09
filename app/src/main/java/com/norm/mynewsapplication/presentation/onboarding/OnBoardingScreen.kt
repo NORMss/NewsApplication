@@ -21,16 +21,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.norm.mynewsapplication.common.NewsButton
-import com.norm.mynewsapplication.common.NewsTextButton
 import com.norm.mynewsapplication.presentation.Dimens.MediumPadding2
 import com.norm.mynewsapplication.presentation.Dimens.PageIndicatorWidth
+import com.norm.mynewsapplication.presentation.common.NewsButton
+import com.norm.mynewsapplication.presentation.common.NewsTextButton
+import com.norm.mynewsapplication.presentation.onboarding.components.OnBoardingEvent
 import com.norm.mynewsapplication.presentation.onboarding.components.OnBoardingPage
 import com.norm.mynewsapplication.presentation.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
 
 @Composable
 fun OnBoardingScreen(
+    event: (OnBoardingEvent) -> Unit,
 ) {
     Column(
         modifier = Modifier.fillMaxSize()
@@ -94,7 +96,7 @@ fun OnBoardingScreen(
                     onClick = {
                         scope.launch {
                             if (pagerState.currentPage == pages.size - 1) {
-
+                                event(OnBoardingEvent.SaveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
