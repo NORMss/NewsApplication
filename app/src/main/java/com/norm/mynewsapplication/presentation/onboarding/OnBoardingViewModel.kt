@@ -2,7 +2,7 @@ package com.norm.mynewsapplication.presentation.onboarding
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.norm.mynewsapplication.domain.usecases.AppEntryUseCases
+import com.norm.mynewsapplication.domain.usecases.app_entry.AppEntryUseCases
 import com.norm.mynewsapplication.presentation.onboarding.components.OnBoardingEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
