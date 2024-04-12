@@ -1,4 +1,4 @@
-package com.norm.mynewsapplication.presentation.home
+package com.norm.mynewsapplication.presentation.common
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.clickable
@@ -46,7 +46,7 @@ fun ArticleCard(
     Row(
         modifier = modifier.clickable {
             onClick()
-        }
+        }   
     ) {
         AsyncImage(
             modifier = Modifier
