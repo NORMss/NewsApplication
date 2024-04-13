@@ -10,7 +10,8 @@ import com.norm.mynewsapplication.domain.usecases.app_entry.AppEntryUseCases
 import com.norm.mynewsapplication.domain.usecases.app_entry.ReadAppEntry
 import com.norm.mynewsapplication.domain.usecases.app_entry.SaveAppEntry
 import com.norm.mynewsapplication.domain.usecases.news.GetNews
-import com.norm.mynewsapplication.presentation.common.NewsUseCases
+import com.norm.mynewsapplication.domain.usecases.news.NewsUseCases
+import com.norm.mynewsapplication.domain.usecases.news.SearchNews
 import com.norm.mynewsapplication.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -62,7 +63,8 @@ object AppModule {
         newsRepository: NewsRepository
     ): NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository),
         )
     }
 
