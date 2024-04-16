@@ -3,15 +3,14 @@ package com.norm.mynewsapplication.presentation.nvgraph
 sealed class Route(
     val route: String,
 ) {
-    object OnBoardingScreen : Route(route = "onBoardingScreen")
-    object HomeScreen : Route(route = "homeScreen")
-    object SearchScreen : Route(route = "searchScreen")
-    object BookmarkScreen : Route(route = "bookmarkScreen")
-    object DetailScreen : Route(route = "detailScreen")
-    object AppStartNavigation : Route(route = "appStartNavigation")
-    object NewsNavigation : Route(route = "newsNavigation")
-    object NewsNavigatorScreen : Route(route = "newsNavigatorScreen")
-
+    data object OnBoardingScreen : Route(route = "onBoardingScreen")
+    data object HomeScreen : Route(route = "homeScreen")
+    data object SearchScreen : Route(route = "searchScreen")
+    data object BookmarkScreen : Route(route = "bookmarkScreen")
+    data object DetailScreen : Route(route = "detailScreen")
+    data object AppStartNavigation : Route(route = "appStartNavigation")
+    data object NewsNavigation : Route(route = "newsNavigation")
+    data object NewsNavigatorScreen : Route(route = "newsNavigatorScreen")
 
 
 }

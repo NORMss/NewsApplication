@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">myNewsApplication</string>
+    <string name="bookmark">Bookmark</string>
 </resources>
