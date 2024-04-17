@@ -32,7 +32,7 @@ import com.norm.mynewsapplication.ui.theme.MyNewsApplicationTheme
 @Composable
 fun DetailsScreen(
     article: Article,
-    event: (DetailsEvent.SaveArticle) -> Unit,
+    event: (DetailsEvent.UpsertDeleteArticle) -> Unit,
     navigateUp: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -61,7 +61,7 @@ fun DetailsScreen(
                 }
             },
             onBookmarkClick = {
-                event(DetailsEvent.SaveArticle)
+                event(DetailsEvent.UpsertDeleteArticle(article))
             },
             onBackClick = navigateUp,
         )

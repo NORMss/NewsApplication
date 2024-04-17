@@ -14,14 +14,14 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.norm.mynewsapplication.R
+import com.norm.mynewsapplication.domain.model.Article
 import com.norm.mynewsapplication.presentation.Dimens.MediumPadding1
 import com.norm.mynewsapplication.presentation.common.ArticlesList
-import com.norm.mynewsapplication.presentation.nvgraph.Route
 
 @Composable
 fun BookmarkScreen(
     state: BookmarkState,
-    navigate: (String) -> Unit,
+    navigateToDetails: (Article) -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -47,8 +47,8 @@ fun BookmarkScreen(
 
         ArticlesList(
             articles = state.articles,
-            onClick = {
-                navigate(Route.DetailScreen.route)
+            onClick = { article ->
+                navigateToDetails(article)
             },
         )
     }

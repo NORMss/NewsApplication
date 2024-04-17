@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import com.norm.mynewsapplication.R
 import com.norm.mynewsapplication.presentation.Dimens.IconSize
 
@@ -69,9 +70,9 @@ fun SearchBar(
             },
             placeholder = {
                 Text(
-                    text = "Search",
+                    text = stringResource(R.string.search_bar),
                     style = MaterialTheme.typography.bodySmall,
-                    color = colorResource(id = R.color.placeholder)
+                    color = colorResource(id = R.color.text_title)
                 )
             },
             shape = MaterialTheme.shapes.medium,
